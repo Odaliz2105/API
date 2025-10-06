@@ -7,7 +7,7 @@ const obtenergift = async () => {
     const respuesta = await request.json();
     console.log(respuesta);
 
-    respuesta.data.slice(8,16).forEach(gif => {
+    respuesta.data.slice(20,28).forEach(gif => {
         const newgifCard = gifTemplate.cloneNode(true);
         const img = newgifCard.querySelector("img");
         img.src = gif.images.original.url;

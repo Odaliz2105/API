@@ -5,7 +5,7 @@ const obtenerMemes = async() => {
     const request = await fetch(url2);
     const respuesta = await request.json();
 
-    respuesta.data.memes.slice(0,8).forEach(meme => {
+    respuesta.data.memes.slice(10,18).forEach(meme => {
         const newMemeCard = memeTemplate.cloneNode(true);
         const img = newMemeCard.querySelector('img');
         img.src = meme.url;
